@@ -7,10 +7,7 @@ class addition
     int a,b,sum;
     void add()
     {
-        cout << "a: ";
-        cin >> a;
-        cout << "b: ";
-        cin >> b;
+        cin >> a>> b;
         sum = a + b;
         cout << sum;
         printf("\n");
