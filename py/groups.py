@@ -11,7 +11,46 @@ def Display(S, *Str):
         print("No students like %s" %Str)
     else:
         print("Students playing %s are: " %Str)
-        print(S)   
+        print(S)  
+
+def intersection(A, B, C):
+    T = []
+    for i in range(len(A)):
+        x = A[i]
+        if (x in B):
+            if (x in C):
+                T.append(x)
+            else:
+                pass
+    print("Students playing all three sports are:", T) 
+
+def intersection2(A, B):
+    R = []
+    for i in range(len(A)):
+        x = A[i]
+        if (x in B):
+            R.append(x)
+        else:
+            pass
+    return R
+
+def diff(A, B):
+    D = []
+    for i in range(len(A)):
+        x = A[i]
+        if(x not in B):
+            D.append(x)
+        else:
+            continue
+    return D
+
+def union(A, B):
+    for i in range(len(A)):
+        x = A[i]
+        if(x in B):
+            B.append(x)
+    return B
+        
 
 C = []
 B = []
@@ -27,31 +66,7 @@ Display(C, "Cricket")
 Display(B, "Badminton")
 Display(F, "Football")
 
-def intersection2(A, B, sA, sB):
-    R = []
-    for i in range(len(A)):
-        x = A[i]
-        if (x in B):
-            R.append(x)
-        else:
-            pass
-    Display(R, ("%s and %s"%(sA,sB)) )
-
-intersection2(C, B, "Cricket", "Badminton")
-intersection2(B, F, "Badminton", "Football")
-intersection2(F, C, "Football", "Cricket")
-
-def intersection(A, B, C):
-    T = []
-    for i in range(len(A)):
-        x = A[i]
-        if (x in B):
-            if (x in C):
-                T.append(x)
-            else:
-                pass
-    print("Students playing all three sports are:", T)
-
-intersection(C, B, F)
-
-
+print("Students that play both Cricket and Badminton are: %s" %())
+print("Students that play either Cricket or badminton but not both are: %s" %())
+print("Number of students that play neither cricket nor Badminton are: %s" %())
+print("Number of students that play Cricket and Football but not Badminton are: %s" %())
