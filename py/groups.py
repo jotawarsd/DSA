@@ -75,7 +75,19 @@ L2 = diff(F, intersection(F, B, C))
 L3 = diff(diff(F, B), C)
 L4 = diff(intersection2(C, F), B)
 
-print("Students that play both Cricket and Badminton are: %s" %(L1))
-print("Students that play either Cricket or badminton but not both are: %s" %(L2))
-print("Number of students that play neither cricket nor Badminton are: %s" %(L3))
-print("Number of students that play Cricket and Football but not Badminton are: %s" %(L4))
+print("1. Students that play both Cricket and Badminton")
+print("2. Students that play either Cricket or badminton but not both")
+print("3. Number of students that play neither cricket nor Badminton")
+print("4. Number of students that play Cricket and Football but not Badminton")
+
+
+c = int(input(("Enter number of option: ")))
+if(c == 1):
+    print("Students that play both Cricket and Badminton are: %s" %(L1))
+elif(c == 2):
+    print("Students that play either Cricket or badminton but not both are: %s" %(L2))
+elif(c == 3):
+    print("Number of students that play neither cricket nor Badminton are: %s" %(len(L3)))
+elif(c == 4):
+    print("Number of students that play Cricket and Football but not Badminton are: %s" %(len(L4)))
+
