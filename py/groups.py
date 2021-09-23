@@ -22,6 +22,7 @@ def intersection(A, B, C):
                 T.append(x)
             else:
                 pass
+    return T
     print("Students playing all three sports are:", T) 
 
 def intersection2(A, B):
@@ -56,7 +57,10 @@ C = []
 B = []
 F = []
 
-I = []
+L1 = []
+L2 = []
+L3 = []
+L4 = []
 
 Accept(C, "Cricket")
 Accept(B, "Badminton")
@@ -66,7 +70,12 @@ Display(C, "Cricket")
 Display(B, "Badminton")
 Display(F, "Football")
 
-print("Students that play both Cricket and Badminton are: %s" %())
-print("Students that play either Cricket or badminton but not both are: %s" %())
-print("Number of students that play neither cricket nor Badminton are: %s" %())
-print("Number of students that play Cricket and Football but not Badminton are: %s" %())
+L1 = intersection2(C, B)
+L2 = diff(F, intersection(F, B, C))
+L3 = diff(diff(F, B), C)
+L4 = diff(intersection2(C, F), B)
+
+print("Students that play both Cricket and Badminton are: %s" %(L1))
+print("Students that play either Cricket or badminton but not both are: %s" %(L2))
+print("Number of students that play neither cricket nor Badminton are: %s" %(L3))
+print("Number of students that play Cricket and Football but not Badminton are: %s" %(L4))
